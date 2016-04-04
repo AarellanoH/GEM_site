@@ -34,12 +34,17 @@ Una vez cumplidos con los requerimientos del sistema para correr la aplicación,
 Versión  | Commit
 ---------|---------
 v1.0.0   |`786b3842cc8e7458be65ab120e958ffee2f07370`
+v1.0.3   |`b0cf6b06b90ac79fb288e67351bb6fc852b48c18`
 
 **v1.0.0**
 - Desarrollo de sitio administrativo de manera responsiva
 - Vista web de los grupos estudiantiles
 - Creación de la estructura de los datos
- 
+
+**v1.0.3**
+- Cambios del estilo de 'Add Grupo Estidantils' para que tenga visibilidad
+- Cambios del estilo de 'Add Evento' para que tenga visibilidad
+- Cambios del estilo de 'Add Usuario' para que tenga visibilidad
 
 **Nombre del equipo:**
 _Educated Racoons_
