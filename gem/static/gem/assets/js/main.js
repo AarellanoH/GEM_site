@@ -19,6 +19,8 @@
 		var	$window = $(window),
 			$body = $('body'),
 			$sidebar = $('#sidebar');
+			$navbar = $('#my-navbar');
+			$sidebarHeader = $('#my-navbar-header');
 
 		// Hack: Enable IE flexbox workarounds.
 			if (skel.vars.IEVersion < 12)
@@ -61,10 +63,29 @@
 
 		// Sidebar.
 			if ($sidebar.length > 0) {
-
 				var $sidebar_a = $sidebar.find('a');
+				var $navbar_a = $navbar.find('a');
 
 				$sidebar_a
+					.addClass('scrolly')
+					.on('click', function() {
+
+						var $this = $(this);
+
+						// External link? Bail.
+							if ($this.attr('href').charAt(0) != '#')
+								return;
+
+						// Deactivate all links.
+							$sidebar_a.removeClass('active');
+
+						// Activate link *and* lock it (so Scrollex doesn't try to activate other links as we're scrolling to this one's section).
+							$this
+								.addClass('active')
+								.addClass('active-locked');
+
+					})
+					$navbar_a
 					.addClass('scrolly')
 					.on('click', function() {
 
@@ -135,12 +156,12 @@
 				offset: function() {
 
 					// If <=large, >small, and sidebar is present, use its height as the offset.
-						if (skel.breakpoint('large').active
-						&&	!skel.breakpoint('small').active
-						&&	$sidebar.length > 0)
-							return $sidebar.height();
-
-					return 0;
+					//	if (skel.breakpoint('large').active
+					//	&&	!skel.breakpoint('small').active
+					//	if$sidebar.length > 0)
+							return $sidebarHeader.height();
+					//return 150;
+					//return 0;
 
 				}
 			});

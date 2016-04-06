@@ -131,6 +131,26 @@ fieldset[disabled] .my-btn.focus {
     float: none;
     height: 100%;
 }
+
 .col-top {
     vertical-align: top;
+}
+
+@media (min-width: 480px) {
+    #my-navbar{
+        display: none;
+        position: fixed;
+    }
+}
+
+.navbar{
+    background: #341F69;
+}
+
+.navbar-inverse .navbar-nav>li>a {
+    color: #DBCACA;
+}
+
+.navbar-inverse {
+    border-color: #7c7474;
 }

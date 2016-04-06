@@ -4,5 +4,7 @@
 $(document).ready(function(){
     $('#mix-container').mixItUp()
 
-
+    $('.nav-collapse').click('li', function() {
+        $('#my-navbar').collapse('hide');
+});
 });
